@@ -1,0 +1,79 @@
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import Button from '../Button/';
+
+<Meta title="INPUT/Button" component={Button} />
+
+# Button
+
+This is the `Button` component in it's default state:
+
+<Canvas>
+    <Story name="Default" argTypes={{
+        primary: {
+            control: 'boolean'
+        },
+        secondary: {
+            control: 'boolean'
+        },
+        disabled: {
+            control: 'boolean'
+        },
+        handleClick: { action: 'clicked' }
+    }}>
+        { args => <Button {...args}>Default button</Button> }
+    </Story>
+</Canvas>
+
+## Component Props
+
+<Props of={Button} />
+
+## Some Examples
+
+### Primary
+
+Simply add the property `primary` to define the color of the button as primary:
+
+<Canvas>
+    <Story name="Primary">
+        <Button primary>
+            Primary button
+        </Button>
+    </Story>
+</Canvas>
+
+### Secondary
+
+Simply add the property `secondary` to define the color of the button as secondary:
+
+<Canvas>
+    <Story name="Secondary">
+        <Button secondary>
+            Secondary button
+        </Button>
+    </Story>
+</Canvas>
+
+### Disabled
+
+Simply add the property `disabled` to disable the button:
+
+<Canvas>
+    <Story name="Disabled">
+        <Button disabled>
+            Disabled button
+        </Button>
+    </Story>
+</Canvas>
+
+### Link
+
+We can use the **styled-component** property `as="a"` and the attribute `href` to convert the `button` in a working link:
+
+<Canvas>
+    <Story name="Link">
+        <Button as="a" href="#">
+            Link button
+        </Button>
+    </Story>
+</Canvas>
