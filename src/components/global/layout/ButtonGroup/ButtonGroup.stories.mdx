@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
 import ButtonGroup from './';
 import Button from '../../input/Button/';
 
@@ -9,39 +9,41 @@ import Button from '../../input/Button/';
 This is the `ButtonGroup` component in it's default state. Buttons aligned to the left:
 
 <Canvas>
-    <Story name="Default" argTypes={{
-        justify: {
-            control: {
-                type: 'inline-radio',
-                options: ['flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly'],
-            }
-        }
-    }}>
-       {args =>
-       <ButtonGroup {...args}>
-            <Button>
-                Default button
-            </Button>
-            <Button primary>
-                Primary button
-            </Button>
-            <Button secondary>
-                Secondary button
-            </Button>
-            <Button disabled>
-                Disabled button
-            </Button>
-            <Button as="a" href="#" primary>
-                Link button
-            </Button>
-        </ButtonGroup>
-        }
+    <Story
+        name="Default"
+        argTypes={{
+            justify: {
+                control: {
+                    type: 'inline-radio',
+                    options: [
+                        'flex-start',
+                        'center',
+                        'flex-end',
+                        'space-between',
+                        'space-around',
+                        'space-evenly',
+                    ],
+                },
+            },
+        }}
+    >
+        {args => (
+            <ButtonGroup {...args}>
+                <Button>Default button</Button>
+                <Button primary>Primary button</Button>
+                <Button secondary>Secondary button</Button>
+                <Button disabled>Disabled button</Button>
+                <Button as="a" href="#" primary>
+                    Link button
+                </Button>
+            </ButtonGroup>
+        )}
     </Story>
 </Canvas>
 
 ## Component Props
 
-<Props of={ButtonGroup} />
+<ArgsTable of={ButtonGroup} />
 
 ## Some Examples
 
@@ -51,19 +53,11 @@ With the `justify` property with value of `center`:
 
 <Canvas>
     <Story name="Centered">
-       <ButtonGroup justify="center">
-            <Button>
-                Default button
-            </Button>
-            <Button primary>
-                Primary button
-            </Button>
-            <Button secondary>
-                Secondary button
-            </Button>
-            <Button disabled>
-                Disabled button
-            </Button>
+        <ButtonGroup justify="center">
+            <Button>Default button</Button>
+            <Button primary>Primary button</Button>
+            <Button secondary>Secondary button</Button>
+            <Button disabled>Disabled button</Button>
             <Button as="a" href="#" primary>
                 Link button
             </Button>
@@ -77,19 +71,11 @@ With the `justify` property with value of `flex-end`:
 
 <Canvas>
     <Story name="Right">
-       <ButtonGroup justify="flex-end">
-            <Button>
-                Default button
-            </Button>
-            <Button primary>
-                Primary button
-            </Button>
-            <Button secondary>
-                Secondary button
-            </Button>
-            <Button disabled>
-                Disabled button
-            </Button>
+        <ButtonGroup justify="flex-end">
+            <Button>Default button</Button>
+            <Button primary>Primary button</Button>
+            <Button secondary>Secondary button</Button>
+            <Button disabled>Disabled button</Button>
             <Button as="a" href="#" primary>
                 Link button
             </Button>
@@ -103,19 +89,11 @@ With the `justify` property with value of `space-between`:
 
 <Canvas>
     <Story name="Space Between">
-       <ButtonGroup justify="space-between">
-            <Button>
-                Default button
-            </Button>
-            <Button primary>
-                Primary button
-            </Button>
-            <Button secondary>
-                Secondary button
-            </Button>
-            <Button disabled>
-                Disabled button
-            </Button>
+        <ButtonGroup justify="space-between">
+            <Button>Default button</Button>
+            <Button primary>Primary button</Button>
+            <Button secondary>Secondary button</Button>
+            <Button disabled>Disabled button</Button>
             <Button as="a" href="#" primary>
                 Link button
             </Button>

@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
 import Button from '../Button/';
 
 <Meta title="INPUT/Button" component={Button} />
@@ -8,25 +8,28 @@ import Button from '../Button/';
 This is the `Button` component in it's default state:
 
 <Canvas>
-    <Story name="Default" argTypes={{
-        primary: {
-            control: 'boolean'
-        },
-        secondary: {
-            control: 'boolean'
-        },
-        disabled: {
-            control: 'boolean'
-        },
-        handleClick: { action: 'clicked' }
-    }}>
-        { args => <Button {...args}>Default button</Button> }
+    <Story
+        name="Default"
+        argTypes={{
+            primary: {
+                control: 'boolean',
+            },
+            secondary: {
+                control: 'boolean',
+            },
+            disabled: {
+                control: 'boolean',
+            },
+            handleClick: { action: 'clicked' },
+        }}
+    >
+        {args => <Button {...args}>Default button</Button>}
     </Story>
 </Canvas>
 
 ## Component Props
 
-<Props of={Button} />
+<ArgsTable of={Button} />
 
 ## Some Examples
 
@@ -36,9 +39,7 @@ Simply add the property `primary` to define the color of the button as primary:
 
 <Canvas>
     <Story name="Primary">
-        <Button primary>
-            Primary button
-        </Button>
+        <Button primary>Primary button</Button>
     </Story>
 </Canvas>
 
@@ -48,9 +49,7 @@ Simply add the property `secondary` to define the color of the button as seconda
 
 <Canvas>
     <Story name="Secondary">
-        <Button secondary>
-            Secondary button
-        </Button>
+        <Button secondary>Secondary button</Button>
     </Story>
 </Canvas>
 
@@ -60,9 +59,7 @@ Simply add the property `disabled` to disable the button:
 
 <Canvas>
     <Story name="Disabled">
-        <Button disabled>
-            Disabled button
-        </Button>
+        <Button disabled>Disabled button</Button>
     </Story>
 </Canvas>
 
