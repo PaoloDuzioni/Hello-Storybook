@@ -1,6 +1,8 @@
 # Storybooks with React
 
-Example of Component Driven Development (CDD) and Component documentation with Storybook 6 and React JS.
+Example of [Component Driven Development (CDD)](https://www.componentdriven.org/) and components documentation with Storybook 6 and React JS.
+
+🚀 [Live Demo](https://pd-storybook.netlify.app)
 
 ## Project includes
 
